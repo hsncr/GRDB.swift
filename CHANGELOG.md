@@ -1,6 +1,22 @@
 Release Notes
 =============
 
+## Next Version
+
+- [#384](https://github.com/groue/GRDB.swift/pull/384): Improve database value decoding diagnostics
+
+### API diff
+
+```diff
+ extension DatabaseValue {
++    @available(*, deprecated)
+     func losslessConvert<T: DatabaseValueConvertible>(sql: String? = nil, arguments: StatementArguments? = nil) -> T
++    @available(*, deprecated)
+     func losslessConvert<T: DatabaseValueConvertible>(sql: String? = nil, arguments: StatementArguments? = nil) -> T?
+ }
+```
+
+
 ## 3.2.0
 
 Released July 8, 2018 &bull; [diff](https://github.com/groue/GRDB.swift/compare/v3.1.0...v3.2.0)
